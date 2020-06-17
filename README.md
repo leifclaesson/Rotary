@@ -1,6 +1,8 @@
 Rotary encoder handler for arduino. v1.1
 
 Copyright 2011 Ben Buxton. Licenced under the GNU GPL Version 3.
+Forked from https://github.com/buxtronix/arduino which also contains other unrelated things in the same repo so I had to make an all new repo.
+
 Contact: bb@cactii.net
 
 A typical mechanical rotary encoder emits a two bit gray code
@@ -61,4 +63,3 @@ as due to EMI, etc.
 
 It is also a lot simpler than others - a static state table and less
 than 10 lines of logic.
-"# Rotary" 
