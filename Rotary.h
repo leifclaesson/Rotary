@@ -10,9 +10,6 @@
 // Enable this to emit codes twice per step.
 //#define HALF_STEP
 
-// Enable weak pullups
-#define ENABLE_PULLUPS
-
 // Values returned by 'process'
 // No complete step yet.
 #define DIR_NONE 0x0
@@ -24,13 +21,14 @@
 class Rotary
 {
   public:
-    Rotary(char, char);
+	Rotary();
+    Rotary(char, char, bool);
     // Process pin(s)
-    unsigned char process();
+    unsigned char process(int8_t);
   private:
     unsigned char state;
-    unsigned char pin1;
-    unsigned char pin2;
+    int8_t pin1;
+    int8_t pin2;
 };
 
 #endif
