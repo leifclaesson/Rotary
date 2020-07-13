@@ -1,9 +1,13 @@
 Rotary encoder handler for arduino. v1.1
 
-Copyright 2011 Ben Buxton. Licenced under the GNU GPL Version 3.
-Forked from https://github.com/buxtronix/arduino which also contains other unrelated things in the same repo so I had to make an all new repo.
+Copyright 2011 Ben Buxton. Licenced under the GNU GPL Version 3. Contact: bb@cactii.net
 
-Contact: bb@cactii.net
+Forked by Leif Claesson 2020 from https://github.com/buxtronix/arduino which also contains other unrelated things in the same repo so I had to make an all new repo.
+Licenced under the GNU GPL Version 3. Contact through Github.
+
+Modifications:
+Now also supports using the direct pin state rather than having to indirectly specifying the pin numbers to read. This makes it possible to use with I2C I/O expanders such as MCP23017, appropriate for I/O challenged MCUs such as ESP8266.
+
 
 A typical mechanical rotary encoder emits a two bit gray code
 on 3 output pins. Every step in the output (often accompanied
