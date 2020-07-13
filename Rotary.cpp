@@ -79,7 +79,7 @@
 #define R_START_M 0x3
 #define R_CW_BEGIN_M 0x4
 #define R_CCW_BEGIN_M 0x5
-const unsigned char ttable[6][4] = {
+const unsigned char IRAM_ATTR ttable[6][4] = {
   // R_START (00)
   {R_START_M,            R_CW_BEGIN,     R_CCW_BEGIN,  R_START},
   // R_CCW_BEGIN
@@ -147,7 +147,7 @@ Rotary::Rotary(char _pin1, char _pin2, bool bEnablePullups) {
   state = R_START;
 }
 
-unsigned char Rotary::process(int8_t _pinstate=-1) {
+unsigned char IRAM_ATTR Rotary::process(int8_t _pinstate=-1) {
   // Grab state of input pins.
   unsigned char pinstate=_pinstate<0?(digitalRead(pin2) << 1) | digitalRead(pin1):_pinstate;
   // Determine new state from the pins and state table.
