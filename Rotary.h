@@ -22,9 +22,9 @@ class Rotary
 {
   public:
 	Rotary();
-    Rotary(char, char, bool);
+    Rotary(char _pin1, char _pin2, bool bEnablePullups=true);
     // Process pin(s)
-    unsigned char process(int8_t);
+    unsigned char process(int8_t pinstate=-1);
   private:
     unsigned char state;
     int8_t pin1;
