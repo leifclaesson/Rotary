@@ -147,7 +147,12 @@ Rotary::Rotary(char _pin1, char _pin2, bool bEnablePullups) {
   state = R_START;
 }
 
-unsigned char IRAM_ATTR Rotary::process(int8_t _pinstate) {
+
+unsigned char
+#ifdef IRAM_ATTR
+IRAM_ATTR
+#endif
+Rotary::process(int8_t _pinstate) {
   // Grab state of input pins.
   unsigned char pinstate=_pinstate<0?(digitalRead(pin2) << 1) | digitalRead(pin1):_pinstate;
   // Determine new state from the pins and state table.
